@@ -1,0 +1,33 @@
+/* src/index.css */
+
+:root {
+  /* Cores base */
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-background: var(--color-black); 
+  --color-text-primary: var(--color-white);
+  --color-border: #444444; 
+  --color-accent: #333333;
+}
+
+/* Remove margem padrão e força o fundo no nível mais alto */
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-background) !important; /* CORREÇÃO: Força o preto */
+  color: var(--color-text-primary) !important; /* CORREÇÃO: Força o branco */
+  min-height: 100vh;
+}
+
+/* Garante que o elemento raiz do React também adota o fundo preto */
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-background) !important;
+}
+
+/* Estilos de reset e de fonte */
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
