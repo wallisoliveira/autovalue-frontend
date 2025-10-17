@@ -221,7 +221,7 @@ const AvaliacaoForm: React.FC = () => {
         setResultado(response.data); 
         alert(`Avaliação enviada! ID: ${response.data.id}. Verifique o resultado abaixo.`);
 
-    } catch (error) {
+     } catch (error: any) {
         let mensagemErro = 'Erro desconhecido ao processar a avaliação.';
 
         if (axios.isAxiosError(error) && error.response) {
